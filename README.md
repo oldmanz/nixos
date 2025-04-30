@@ -3,7 +3,7 @@
 ### Setup Nix 
 ```
 sudo su
-passwd #for ssh
+passwd    ## For ssh
 nix-shell -p neovim git
 ```
 
@@ -57,6 +57,7 @@ git clone git@github.com:oldmanz/nixos.git
 
 ### First Build
 ```
+sudo chown oldmanz /persist/home/oldmanz
 sudo nixos-rebuild switch --flake /home/oldmanz/nixos#default
 ```
 
