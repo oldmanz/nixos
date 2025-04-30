@@ -35,6 +35,7 @@ mkdir -p /mnt/persist/home/oldmanz
 ### Install
 ```
 nixos-install --root /mnt --flake /mnt/etc/nixos#default
+reboot
 ```
 
 
