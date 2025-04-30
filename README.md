@@ -55,6 +55,11 @@ Add to Github
 git clone git@github.com:oldmanz/nixos.git
 ```
 
+### First Build
+```
+sudo nixos-rebuild switch --flake /home/oldmanz/nixos#default
+```
+
 
 
 
