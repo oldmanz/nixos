@@ -1,3 +1,5 @@
+## Install
+
 ### Setup Nix 
 ```
 sudo su
@@ -37,6 +39,23 @@ mkdir -p /mnt/persist/home/oldmanz
 nixos-install --root /mnt --flake /mnt/etc/nixos#default
 reboot
 ```
+
+
+## Post Install
+
+### SSH Keys
+```
+ssh-keygen -t ed25519 -C "travis@oldmanz.com"
+cat .ssh/id_ed25519.pub
+```
+Add to Github
+
+### Clone Config
+```
+git clone git@github.com:oldmanz/nixos.git
+```
+
+
 
 
 
