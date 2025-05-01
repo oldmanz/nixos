@@ -51,7 +51,7 @@
       zsh = {
         enable = true;
         enableCompletion = false; # enabled in oh-my-zsh
-        initExtra = ''
+        initContent = ''
           test -f ~/.dir_colors && eval $(dircolors ~/.dir_colors)
         '';
         shellAliases = {
@@ -59,14 +59,11 @@
           v = "nvim";
           vi = "nvim";
           vim = "nvim";
-          h = "nixos-rebuild switch --flake $HOME/nixos#Znform";
-          s = "nixos-rebuild switch --flake $HOME/nixos#Znform";
+          h = "nixos-rebuild switch --flake $HOME/nixos#default";
+          s = "nixos-rebuild switch --flake $HOME/nixos#default";
           os = "code ~/nixos/system/configuration.nix";
           oh = "code ~/nixos/home/home.nix";
-          n = "docker exec -it manager bash";
           w = "curl wttr.in";
-          zss = "zfs list -o space -r rpool";
-          zs = "zfs list -t snapshot";
           e = "exit";
         };
         oh-my-zsh = {
