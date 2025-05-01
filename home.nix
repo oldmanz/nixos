@@ -7,6 +7,14 @@
 
   home.stateVersion = "24.05";
 
+  home.packages = with pkgs; [
+      # ...
+      gnomeExtensions.paperwm
+      gnomeExtensions.vitals
+      gnomeExtensions.space-bar
+    ];
+    dconf.settings = import ./dconf.nix;
+
   # home.persistence."/persist/home/oldmanz" = {
   #   directories = [
   #     "nixos"
