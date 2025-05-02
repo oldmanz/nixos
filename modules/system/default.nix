@@ -6,5 +6,6 @@ imports = [
   ./sound.nix
   ./virtualisation.nix
   ./boot.nix
+  ./networking.nix
 ];
 }

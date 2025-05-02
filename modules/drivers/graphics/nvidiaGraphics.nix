@@ -6,7 +6,7 @@
   };
 
   config = lib.mkIf config.z.nvidiaGraphics.enable {
-    hardwareGraphics.enable = true;
+    z.hardwareGraphics.enable = true;
     services.xserver.videoDrivers = ["nvidia"];
 
     hardware.nvidia = {

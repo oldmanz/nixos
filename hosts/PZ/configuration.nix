@@ -14,6 +14,7 @@
   z.nixConfig.enable = true;
   z.sound.enable = true;
   z.virtualisation.enable = true;
+  z.networking.enable = true;
 
   ## Networking
 
