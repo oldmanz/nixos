@@ -1,7 +1,12 @@
-{ lib, inputs, ... }:
+{ pkgs, lib, config, inputs, ... }: {
 
-{
-  boot.initrd.postDeviceCommands = lib.mkAfter ''
+  options = {
+    systemImpermanence.enable = 
+      lib.mkEnableOption "enables systemImpermanence";
+  };
+
+  config = lib.mkIf config.systemImpermanence.enable {
+    boot.initrd.postDeviceCommands = lib.mkAfter ''
     mkdir /btrfs_tmp
     mount /dev/root_vg/root /btrfs_tmp
     if [[ -e /btrfs_tmp/root ]]; then
@@ -43,4 +48,6 @@
       { file = "/var/keys/secret_file"; parentDirectory = { mode = "u=rwx,g=,o="; }; }
     ];
   };
+  };
+
 }

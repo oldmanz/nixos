@@ -67,8 +67,8 @@
           v = "nvim";
           vi = "nvim";
           vim = "nvim";
-          h = "nixos-rebuild switch --flake $HOME/nixos#default";
-          s = "nixos-rebuild switch --flake $HOME/nixos#default";
+          h = "nixos-rebuild switch --flake $HOME/nixos#$HOST";
+          s = "nixos-rebuild switch --flake $HOME/nixos#$HOST";
           os = "code ~/nixos/system/configuration.nix";
           oh = "code ~/nixos/home/home.nix";
           w = "curl wttr.in";

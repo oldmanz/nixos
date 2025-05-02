@@ -4,43 +4,13 @@
   imports =
     [
       ./hardware-configuration.nix
-      #./modules/impermanence.nix
-      ./nvidia.nix
-      ./software.nix
+      ../../modules/software/default.nix
       inputs.home-manager.nixosModules.home-manager
     ];
 
-  ## Nix settings
-  nix = {
-    # Automate garbage collection
-    gc = {
-      automatic = true;
-      dates     = "weekly";
-      options   = "--delete-older-than 7d";
-    };
-
-    # Avoid unwanted garbage collection when using nix-direnv
-    extraOptions = ''
-      experimental-features = nix-command flakes
-      keep-outputs          = true
-      keep-derivations      = true
-    '';
-
-    settings = {
-      # Automate `nix store --optimise`
-      auto-optimise-store = true;
-
-      # Required by Cachix to be used as non-root user
-      trusted-users = [ "root" ];
-    };
-  };
-
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-      allowUnfreePredicate = (pkg: true);
-    };
-  };
+  amdGraphics.enable = true;
+  systemImpermanence.enable = false;
+  nixConfig.enable = true;
 
   ## Boot Settings
   boot = {
@@ -53,7 +23,6 @@
 
   ## Networking
   networking = {
-    hostName = "PZ";
     hostId = "72439742";
     networkmanager.enable = true;
     firewall.enable = false;
@@ -158,7 +127,7 @@
   home-manager = {
     extraSpecialArgs = {inherit inputs outputs pkgs;};
     users = {
-      "oldmanz" = import ./home.nix;
+      "oldmanz" = import ../../modules/home/home.nix;
     };
   };
 

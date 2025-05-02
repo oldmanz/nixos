@@ -21,17 +21,17 @@
 
   outputs = {nixpkgs, ...} @ inputs:
   {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        inputs.disko.nixosModules.default
-        (import ./disko.nix { device = "/dev/nvme0n1"; })
-
-        ./configuration.nix
-              
-        inputs.home-manager.nixosModules.default
-        inputs.impermanence.nixosModules.impermanence
-      ];
+    nixosConfigurations = nixpkgs.lib.genAttrs ["PZ"] (hostName: nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          { networking.hostName = hostName; }
+          inputs.disko.nixosModules.default
+          (import ./hosts/${hostName}/disko.nix { device = "/dev/nvme0n1"; })
+          inputs.home-manager.nixosModules.default
+          inputs.impermanence.nixosModules.impermanence
+          ./hosts/${hostName}/configuration.nix
+          ./modules
+        ];
+      });
     };
-  };
-}
+  }

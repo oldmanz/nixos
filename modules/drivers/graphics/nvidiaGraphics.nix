@@ -1,10 +1,12 @@
-  {...}:
-  
-  {
-    hardware.graphics = {
-        enable = true;
-    };
+  { pkgs, lib, config, ... }: {
 
+  options = {
+    nvidiaGraphics.enable = 
+      lib.mkEnableOption "enables nvidiaGraphics";
+  };
+
+  config = lib.mkIf config.nvidiaGraphics.enable {
+    hardwareGraphics.enable = true;
     services.xserver.videoDrivers = ["nvidia"];
 
     hardware.nvidia = {
@@ -14,4 +16,7 @@
         open = false;
         nvidiaSettings = true;
     };
-  }
+
+  };
+
+}

@@ -6,7 +6,7 @@
     "disabled"
     ];
     enabled-extensions = [
-      "paperwm@paperwm.github.com"
+      ##"paperwm@paperwm.github.com"
       "Vitals@CoreCoding.com"
       "space-bar@luchrioh"
     ];
@@ -29,12 +29,10 @@
     show-battery-percentage = true;
   };
 
-  dconf.settings = {
-    "org/gnome/desktop/background" = {
-        "picture-uri" = "/home/oldmanz/nixos/wallpaper.png";
-    };
-    "org/gnome/desktop/screensaver" = {
-        "picture-uri" = "/home/oldmanz/nixos/wallpaper.png";
-    };
+  "org/gnome/desktop/background" = {
+      picture-uri = "/home/oldmanz/nixos/wallpaper.png";
+  };
+  "org/gnome/desktop/screensaver" = {
+      picture-uri = "/home/oldmanz/nixos/wallpaper.png";
 };
 }
