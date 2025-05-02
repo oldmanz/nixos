@@ -8,25 +8,15 @@
       inputs.home-manager.nixosModules.home-manager
     ];
 
-  amdGraphics.enable = true;
-  systemImpermanence.enable = false;
-  nixConfig.enable = true;
-
-  ## Boot Settings
-  boot = {
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-      timeout = 1;
-    };
-  };
+  z.boot.enable = true;
+  z.amdGraphics.enable = true;
+  z.systemImpermanence.enable = false;
+  z.nixConfig.enable = true;
+  z.sound.enable = true;
+  z.virtualisation.enable = true;
 
   ## Networking
-  networking = {
-    hostId = "72439742";
-    networkmanager.enable = true;
-    firewall.enable = false;
-  };
+
 
   ## Localization
   time.timeZone = "America/New_York";
@@ -56,26 +46,8 @@
   };
   services.openssh.enable = true;
 
-  ## Sound
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-  };
-
   ## Virtualization
-  virtualisation = {
-    docker.enable = true;
-    libvirtd = {
-      enable = true;
-      onBoot = "ignore";
-      onShutdown = "shutdown";
-    };
-  };
+
 
 
   ## Display

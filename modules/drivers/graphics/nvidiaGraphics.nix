@@ -1,11 +1,11 @@
   { pkgs, lib, config, ... }: {
 
   options = {
-    nvidiaGraphics.enable = 
+    z.nvidiaGraphics.enable = 
       lib.mkEnableOption "enables nvidiaGraphics";
   };
 
-  config = lib.mkIf config.nvidiaGraphics.enable {
+  config = lib.mkIf config.z.nvidiaGraphics.enable {
     hardwareGraphics.enable = true;
     services.xserver.videoDrivers = ["nvidia"];
 

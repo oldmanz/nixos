@@ -1,11 +1,11 @@
 { pkgs, lib, config, ... }: {
 
     options = {
-    hardwareGraphics.enable = 
+    z.hardwareGraphics.enable = 
       lib.mkEnableOption "enables hardwareGraphics";
   };
 
-  config = lib.mkIf config.hardwareGraphics.enable {
+  config = lib.mkIf config.z.hardwareGraphics.enable {
     hardware.graphics = {
         enable = true;
         enable32Bit = true;

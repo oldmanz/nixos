@@ -1,12 +1,12 @@
 { pkgs, lib, config, ... }: {
 
   options = {
-    amdGraphics.enable = 
+    z.amdGraphics.enable = 
       lib.mkEnableOption "enables amdGraphics";
   };
 
-  config = lib.mkIf config.amdGraphics.enable {
-    hardwareGraphics.enable= true;
+  config = lib.mkIf config.z.amdGraphics.enable {
+    z.hardwareGraphics.enable= true;
   };
 
 }

@@ -25,6 +25,7 @@
         specialArgs = {inherit inputs;};
         modules = [
           { networking.hostName = hostName; }
+          { networking.hostId = "72439742";}
           inputs.disko.nixosModules.default
           (import ./hosts/${hostName}/disko.nix { device = "/dev/nvme0n1"; })
           inputs.home-manager.nixosModules.default

@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, ... }: {
 
   options = {
-    nixConfig.enable = 
+    z.nixConfig.enable = 
       lib.mkEnableOption "enables nixConfig";
   };
 
-  config = lib.mkIf config.nixConfig.enable {
+  config = lib.mkIf config.z.nixConfig.enable {
 
     nix = {
         # Automate garbage collection
