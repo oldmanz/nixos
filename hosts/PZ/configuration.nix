@@ -24,5 +24,9 @@
   z.gnome.enable = true;
   z.users.enable = true;
 
+  z.software.general.enable = true;
+  z.software.gaming.enable = true;
+  z.software.coding.enable = true;
+
 
 }
