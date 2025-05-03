@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, ... }: {
 
     options = {
-    z.shell.enable = 
+    z.system.shell.enable = 
         lib.mkEnableOption "enables shell";
     };
 
-    config = lib.mkIf config.z.shell.enable {
+    config = lib.mkIf config.z.system.shell.enable {
 
       environment.shells = with pkgs; [ zsh ];
   programs.zsh.enable = true;

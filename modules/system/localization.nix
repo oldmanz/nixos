@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, ... }: {
 
     options = {
-    z.localization.enable = 
+    z.system.localization.enable = 
         lib.mkEnableOption "enables localization";
     };
 
-    config = lib.mkIf config.z.localization.enable {
+    config = lib.mkIf config.z.system.localization.enable {
 
       time.timeZone = "America/New_York";
       i18n.defaultLocale = "en_US.UTF-8";

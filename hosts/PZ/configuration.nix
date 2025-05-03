@@ -8,21 +8,24 @@
       inputs.home-manager.nixosModules.home-manager
     ];
 
-  z.boot.enable = true;
-  z.systemImpermanence.enable = false;
-  z.nixConfig.enable = true;
-  z.sound.enable = true;
-  z.virtualisation.enable = true;
-  z.networking.enable = true;
-  z.localization.enable = true;
-  z.bluetooth.enable = true;
-  z.ssh.enable = true;
-  z.printing.enable = true;
-  z.shell.enable = true;
+  z.system.boot.enable = true;
+  z.system.systemImpermanence.enable = false;
+  z.system.nixConfig.enable = true;
+  z.system.sound.enable = true;
+  z.system.virtualisation.enable = true;
+  z.system.networking.enable = true;
+  z.system.localization.enable = true;
+  z.system.bluetooth.enable = true;
+  z.system.ssh.enable = true;
+  z.system.printing.enable = true;
+  z.system.shell.enable = true;
   
-  z.amdGraphics.enable = true;
-  z.gnome.enable = true;
-  z.users.enable = true;
+  z.drivers.graphics.amd.enable = true;
+
+  z.system.display.gnome.enable = true;
+  z.system.display.hyprland.enable = true;
+
+  z.system.users.enable = true;
 
   z.software.general.enable = true;
   z.software.gaming.enable = true;

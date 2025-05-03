@@ -9,5 +9,7 @@
 
     config = lib.mkIf config.z.software.coding.enable {
         z.vscode.enable = true;
+
+        services.tailscale.enable = true;
     };
 }

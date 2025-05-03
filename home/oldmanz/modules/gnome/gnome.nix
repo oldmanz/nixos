@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, ... }: {
 
     options = {
-    z.gnome.enable = 
+    z.home.gnome.enable = 
         lib.mkEnableOption "enables gnome";
     };
 
-    config = lib.mkIf config.z.gnome.enable {
+    config = lib.mkIf config.z.home.gnome.enable {
 
   home.packages = with pkgs; [
       # ...

@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, outputs, ... }: {
 
     options = {
-    z.users.enable = 
+    z.system.users.enable = 
         lib.mkEnableOption "enables users";
     };
 
-    config = lib.mkIf config.z.users.enable {
+    config = lib.mkIf config.z.system.users.enable {
 
   users = {
     users."oldmanz" = {

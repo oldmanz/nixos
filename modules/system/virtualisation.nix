@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, ... }: {
 
     options = {
-        z.virtualisation.enable = 
+        z.system.virtualisation.enable = 
             lib.mkEnableOption "enables virtualisation";
     };
 
-    config = lib.mkIf config.z.virtualisation.enable {
+    config = lib.mkIf config.z.system.virtualisation.enable {
 
           virtualisation = {
             docker.enable = true;

@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, ... }: {
 
     options = {
-        z.boot.enable = 
+        z.system.boot.enable = 
             lib.mkEnableOption "enables boot";
     };
 
-    config = lib.mkIf config.z.boot.enable {
+    config = lib.mkIf config.z.system.boot.enable {
 
           boot = {
             loader = {

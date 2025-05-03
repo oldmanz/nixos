@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, ... }: {
 
     options = {
-    z.git.enable = 
+    z.home.git.enable = 
         lib.mkEnableOption "enables git";
     };
 
-    config = lib.mkIf config.z.git.enable {
+    config = lib.mkIf config.z.home.git.enable {
 
   programs = {
       git = {

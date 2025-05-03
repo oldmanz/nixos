@@ -62,6 +62,13 @@ sudo nixos-rebuild switch --flake /home/oldmanz/nixos#default
 ```
 
 
+## Other
+
+## tailscale
+```
+tailscale up --login-server=<serverUrl>  ## not working 
+```
+
 
 
 

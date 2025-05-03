@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, ... }: {
 
     options = {
-    z.homeImpermanence.enable = 
+    z.home.impermanence.enable = 
         lib.mkEnableOption "enables homeImpermanence";
     };
 
-    config = lib.mkIf config.z.homeImpermanence.enable {
+    config = lib.mkIf config.z.home.impermanence.enable {
 
    home.persistence."/persist/home/oldmanz" = {
     directories = [

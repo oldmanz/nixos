@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, ... }: {
 
   options = {
-    z.nixConfig.enable = 
+    z.system.nixConfig.enable = 
       lib.mkEnableOption "enables nixConfig";
   };
 
-  config = lib.mkIf config.z.nixConfig.enable {
+  config = lib.mkIf config.z.system.nixConfig.enable {
 
   system.stateVersion = "24.11";
     nix = {

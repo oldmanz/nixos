@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, ... }: {
 
     options = {
-    z.bluetooth.enable = 
+    z.system.bluetooth.enable = 
         lib.mkEnableOption "enables bluetooth";
     };
 
-    config = lib.mkIf config.z.bluetooth.enable {
+    config = lib.mkIf config.z.system.bluetooth.enable {
 
         services.blueman.enable = true;
     };

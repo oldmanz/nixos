@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, ... }: {
 
     options = {
-    z.ssh.enable = 
+    z.system.ssh.enable = 
         lib.mkEnableOption "enables ssh";
     };
 
-    config = lib.mkIf config.z.ssh.enable {
+    config = lib.mkIf config.z.system.ssh.enable {
 
   programs.gnupg.agent = {
     enable = true;

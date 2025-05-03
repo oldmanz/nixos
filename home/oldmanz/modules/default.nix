@@ -1,9 +1,10 @@
 { config, pkgs, ... }:
 {
 imports = [
-  ./homeImpermanence.nix
+  ./impermanence.nix
   ./git.nix
   ./zsh.nix
   ./gnome
+  ./hyprland.nix
 ];
 }

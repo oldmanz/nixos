@@ -6,10 +6,11 @@
     ./modules
   ];
   
-  z.homeImpermanence.enable = false;
-  z.git.enable = true;
-  z.zsh.enable = true;
-  z.gnome.enable = true;
+  z.home.impermanence.enable = false;
+  z.home.git.enable = true;
+  z.home.zsh.enable = true;
+  z.home.gnome.enable = true;
+  z.home.hyprland.enable = true;
 
   home.stateVersion = "24.05";
 

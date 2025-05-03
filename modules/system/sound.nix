@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, ... }: {
 
     options = {
-    z.sound.enable = 
+    z.system.sound.enable = 
         lib.mkEnableOption "enables sound";
     };
 
-    config = lib.mkIf config.z.sound.enable {
+    config = lib.mkIf config.z.system.sound.enable {
 
         services.pulseaudio.enable = false;
         security.rtkit.enable = true;
