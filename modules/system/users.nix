@@ -24,7 +24,7 @@
   home-manager = {
     extraSpecialArgs = {inherit inputs outputs pkgs;};
     users = {
-      "oldmanz" = import ../home/oldmanz;
+      "oldmanz" = import ../../home/oldmanz;
     };
   };
     };
