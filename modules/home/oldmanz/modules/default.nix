@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 {
 imports = [
-  ./drivers
-  ./software
-  ./system
+  ./homeImpermanence.nix
 ];
 }

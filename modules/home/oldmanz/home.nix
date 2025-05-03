@@ -3,8 +3,10 @@
 { 
   imports = [
     inputs.impermanence.nixosModules.home-manager.impermanence
+    ./modules
   ];
-
+  
+  z.homeImpermanence.enable = false;
   home.stateVersion = "24.05";
 
   home.packages = with pkgs; [

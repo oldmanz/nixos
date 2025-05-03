@@ -7,6 +7,7 @@
 
   config = lib.mkIf config.z.nixConfig.enable {
 
+  system.stateVersion = "24.11";
     nix = {
         # Automate garbage collection
         gc = {

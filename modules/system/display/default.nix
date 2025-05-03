@@ -1,8 +1,7 @@
+
 { config, pkgs, ... }:
 {
 imports = [
-  ./drivers
-  ./software
-  ./system
+  ./gnome.nix
 ];
 }
