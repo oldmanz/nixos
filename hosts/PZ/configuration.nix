@@ -9,7 +9,7 @@
     ];
 
   z.system.boot.enable = true;
-  z.system.systemImpermanence.enable = false;
+  z.system.impermanence.enable = false;
   z.system.nixConfig.enable = true;
   z.system.sound.enable = true;
   z.system.virtualisation.enable = true;
