@@ -10,7 +10,7 @@
   z.home.git.enable = true;
   z.home.zsh.enable = true;
   z.home.gnome.enable = true;
-  z.home.hyprland.enable = true;
+  z.home.hyprland.enable = false;
 
   home.stateVersion = "24.05";
 

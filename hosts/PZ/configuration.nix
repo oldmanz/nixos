@@ -23,7 +23,7 @@
   z.drivers.graphics.amd.enable = true;
 
   z.system.display.gnome.enable = true;
-  z.system.display.hyprland.enable = true;
+  z.system.display.hyprland.enable = false;
 
   z.system.users.enable = true;
 

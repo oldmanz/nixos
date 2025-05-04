@@ -6,5 +6,6 @@ imports = [
   ./zsh.nix
   ./gnome
   ./hyprland.nix
+
 ];
 }
