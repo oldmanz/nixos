@@ -6,7 +6,7 @@
     ./modules
   ];
   
-  z.home.impermanence.enable = false;
+  z.home.impermanence.enable = mkIf (z.system.impermanenc.enable == true) true;false;
   z.home.git.enable = true;
   z.home.zsh.enable = true;
   z.home.gnome.enable = true;
