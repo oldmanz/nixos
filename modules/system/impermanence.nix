@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, ... }: {
 
   options = {
-    z.system.systemImpermanence.enable = 
+    z.system.impermanence.enable = 
       lib.mkEnableOption "enables systemImpermanence";
   };
 
-  config = lib.mkIf config.z.system.systemImpermanence.enable {
+  config = lib.mkIf config.z.system.impermanence.enable {
     boot.initrd.postDeviceCommands = lib.mkAfter ''
     mkdir /btrfs_tmp
     mount /dev/root_vg/root /btrfs_tmp
