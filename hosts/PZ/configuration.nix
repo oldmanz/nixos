@@ -22,8 +22,8 @@
   
   z.drivers.graphics.amd.enable = true;
 
-  z.system.display.gnome.enable = false;
-  z.system.display.kde.enable = true;
+  z.system.display.gnome.enable = true;
+  z.system.display.kde.enable = false;
   z.system.display.hyprland.enable = false;
 
   z.system.users.enable = true;
