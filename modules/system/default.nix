@@ -2,7 +2,7 @@
 {
 imports = [
   ./nixConfig.nix
-  ./systemImpermanence.nix
+  ./impermanence.nix
   ./sound.nix
   ./virtualisation.nix
   ./boot.nix
