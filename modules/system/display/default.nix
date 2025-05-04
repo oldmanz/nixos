@@ -5,5 +5,6 @@ imports = [
   ./gnome.nix
   ./hyprland.nix
   ./sddm.nix
+  ./kde.nix
 ];
 }
