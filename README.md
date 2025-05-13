@@ -9,9 +9,10 @@ nix-shell -p neovim  ## If vim needed
 
 ### Pull this repo and Install
 ```
+HOST=PZ && \
 git clone https://github.com/oldmanz/nixos.git && \
 cd nixos && \
-bash ./install.sh
+bash ./install.sh $HOST
 ```
 
 ### Reboot
